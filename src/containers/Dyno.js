@@ -22,13 +22,11 @@ export default class Dyno extends Component {
 	handleAPI = (call) => {};
 
 	handleClick = (d) => {
-		console.log(d);
 		this.setState({ displayDyno: true });
 		this.displayDyno(d);
 	};
 
 	displayDyno = (data) => {
-    console.log(data);
     this.setState({currentDyno: data});
 	};
 
