@@ -6,7 +6,8 @@ export default function DynoItem(props) {
 	let data = props.data;
 
 	const handleClick = () => {
-		props.handleClick(data);
+    props.handleClick(data);
+    
 	};
 
 	return (
