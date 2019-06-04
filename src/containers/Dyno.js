@@ -8,8 +8,8 @@ import './dyno.scss';
 export default class Dyno extends Component {
 	state = {
 		sumpin: [],
-    displayDyno: false,
-    currentDyno: {}
+		displayDyno: false,
+		currentDyno: {}
 	};
 
 	componentDidMount() {
@@ -27,14 +27,19 @@ export default class Dyno extends Component {
 	};
 
 	displayDyno = (data) => {
-    this.setState({currentDyno: data});
+		this.setState({ currentDyno: data });
+	};
+
+	handleExit = () => {
+		console.log('handling exit');
+		this.setState({ displayDyno: false });
 	};
 
 	render() {
-		if(this.state.displayDyno){
-      return <DynoDisplay data={this.state.currentDyno}/>
-    } else {
-      return <DynoList data={this.state.sumpin} handleClick={this.handleClick}/>
-    }
+		if (this.state.displayDyno) {
+			return <DynoDisplay data={this.state.currentDyno} exit={this.handleExit} />;
+		} else {
+			return <DynoList data={this.state.sumpin} handleClick={this.handleClick} />;
+		}
 	}
 }
