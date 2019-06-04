@@ -7,14 +7,14 @@ export default function DynoDisplay(props) {
 	};
 	return (
 		<div className="dyno-display-container">
-			<div className="exit" onClick={exit}>
-				X
-			</div>
 			<div className="title">{props.data.title}</div>
 			{/* <div className="tech-stack" />
 			<div className="description" />
 			<a href="" className="github-url" />
 			<a href="" className="deployed-url" /> */}
+			<div className="exit" onClick={exit}>
+				Back
+			</div>
 		</div>
 	);
 }
