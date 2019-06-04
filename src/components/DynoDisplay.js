@@ -3,7 +3,6 @@ import './dyno-display.scss';
 
 export default function DynoDisplay(props) {
 	const exit = () => {
-		console.log('exit');
 		props.exit();
 	};
 	return (

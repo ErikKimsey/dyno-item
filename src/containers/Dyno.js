@@ -14,12 +14,9 @@ export default class Dyno extends Component {
 
 	componentDidMount() {
 		this.props.getStories('Yarn').then((data) => {
-			// console.log(data);
 			this.setState({ sumpin: data });
 		});
 	}
-
-	handleAPI = (call) => {};
 
 	handleClick = (d) => {
 		this.setState({ displayDyno: true });
@@ -31,7 +28,6 @@ export default class Dyno extends Component {
 	};
 
 	handleExit = () => {
-		console.log('handling exit');
 		this.setState({ displayDyno: false });
 	};
 
