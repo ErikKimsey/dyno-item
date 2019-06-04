@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DynoItem from '../components/DynoItem';
 import DynoDisplay from '../components/DynoDisplay';
+import DynoList from '../components/DynoList';
 
 import './dyno.scss';
 
@@ -33,22 +34,10 @@ export default class Dyno extends Component {
 	};
 
 	render() {
-		return (
-			<div>
-				<div className="dyno-container">
-					{
-            (this.state.displayDyno === false) ?
-              {
-                return (this.state.sumpin.map((e) => {
-                  
-                    return <DynoItem handleClick={this.handleClick} data={e} />;
-                  
-              }))
-              }
-
-          }
-				</div>
-			</div>
-		);
+		if(this.state.displayDyno){
+      return <DynoDisplay />
+    } else {
+      return <DynoList data={this.state.sumpin}/>
+    }
 	}
 }
