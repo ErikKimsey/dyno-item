@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './dyno-item.scss';
 
-export default function DynoItem(props) {
-	let data = props.data;
+export default class DynoItem extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			odd: false
+		};
+	}
 
-	const handleClick = () => {
-    props.handleClick(data);
-    
+	componentDidMount() {
+		this.setIfOdd(this.props);
+	}
+
+	setIfOdd = (d) => {
+		let odd = d.index % 2 === 0 ? true : false;
+		this.setState({ odd: odd });
 	};
 
-	return (
-		<div className="dyno-item-container" onClick={handleClick}>
-			<div className="item">{data.title}</div>
-		</div>
-	);
+	handleClick = () => {
+		this.props.handleClick(this.props.data);
+	};
+
+	render() {
+		return (
+			<div className="dyno-item-container" onClick={this.handleClick}>
+				<div className="item">{this.props.data.title}</div>
+			</div>
+		);
+	}
 }
