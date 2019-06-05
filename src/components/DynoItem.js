@@ -27,15 +27,15 @@ export default class DynoItem extends Component {
 			setTimeout(() => {
 				this.item.current.classList.remove('left-appeared');
 				this.item.current.classList.add('left-disappeared');
-				this.itemTitle.current.classList.remove('item-appeared');
-				this.itemTitle.current.classList.add('item-disappeared');
+				// this.itemTitle.current.classList.add('item-disappeared');
+				// this.itemTitle.current.classList.remove('item-appeared');
 			}, this.getRandomTime(100, 1000));
 		} else {
 			setTimeout(() => {
 				this.item.current.classList.remove('left-disappeared');
 				this.item.current.classList.add('left-appeared');
-				this.itemTitle.current.classList.remove('item-disappeared');
-				this.itemTitle.current.classList.add('item-appeared');
+				// this.itemTitle.current.classList.add('item-appeared');
+				// this.itemTitle.current.classList.remove('item-disappeared');
 			}, this.getRandomTime(100, 1000));
 		}
 	}
@@ -62,9 +62,9 @@ export default class DynoItem extends Component {
 	render() {
 		return (
 			<div className="dyno-item-container" ref={this.item} onClick={this.handleClick}>
-				<div className="item" ref={this.itemTitle}>
-					{this.props.data.title}
-				</div>
+				{/* <div className="item" ref={this.itemTitle}> */}
+				{this.props.data.title}
+				{/* </div> */}
 			</div>
 		);
 	}

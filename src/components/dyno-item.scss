@@ -1,5 +1,24 @@
 @import '../styles/globals.scss';
 
+@keyframes hideFont {
+  from {
+    font-size: 1em;
+  }
+  
+  to {
+    font-size: 0em;
+  }
+}
+@keyframes showFont {
+  from {
+    font-size: 0em;
+  }
+  
+  to {
+    font-size: 1em;
+  }
+}
+
 .dyno-item-container {
   background-color: #ffffff;
   width: 100%;
@@ -11,21 +30,25 @@
   justify-content: center;
   align-items: center;
   transition: width 1000ms ease-in-out;
+  font-size: 0em;
   .item {
     font-size: 1em;
-    transition: width 1000ms ease-in-out;
+    // transition: width 2000ms ease-in-out;
   }
 }
 
 .left-disappeared {
   width: 10px;
+  font-size: 0em;
+  animation: hideFont 1000ms;
 }
 
 .item-disappeared {
-  opacity: 0;
+  display: none;
+  transition: width 1000ms ease-in-out;
+
 }
 .left-appeared {
-  font-size: 1em;
   background-color: #ffffff;
   width: 100%;
   height: 100px;
@@ -35,8 +58,12 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  font-size: 1em;
+  transition: width 1000ms ease-in-out;
+  animation: showFont 1000ms;
 }
 
 .item-appeared {
-  opacity: 1;
+  display: inline;
+  transition: width 1000ms ease-in-out;
 }
