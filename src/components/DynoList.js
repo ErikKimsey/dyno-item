@@ -31,12 +31,15 @@ export default class DynoList extends Component {
 	};
 
 	render() {
+		console.log(this.state.displayDyno);
+
 		return (
 			<div className="dyno-list-container">
 				<DynoDisplay data={this.state.currentDyno} exit={this.handleExit} />
 				{this.props.data.map((e, i) => {
 					return (
 						<DynoItem
+							isDisplaying={this.state.displayDyno}
 							key={e.title}
 							data={e}
 							index={++i}
