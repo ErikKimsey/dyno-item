@@ -1,8 +1,12 @@
 
 .dyno-list-container {
+  position: absolute;
   width: 1100px;
   height: 600px;
   background-color: #000000;
   overflow-y: auto;
-  // z-index: 0;
+}
+
+.isDisplaying {
+  display: none;
 }

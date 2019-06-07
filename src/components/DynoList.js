@@ -10,12 +10,16 @@ export default class DynoList extends Component {
 		this.list = React.createRef();
 	}
 
-	componentDidMount() {
-		console.log('mounted list');
+	componentDidMount() {}
 
-		window.addEventListener('scroll', (e) => {
-			console.log(e.target);
-		});
+	componentDidUpdate() {
+		if (this.props.isDisplaying === true) {
+			setTimeout(() => {
+				this.list.current.classList.add('isDisplaying');
+			}, 2000);
+		} else {
+			this.list.current.classList.remove('isDisplaying');
+		}
 	}
 
 	handleClick = (e) => {
@@ -24,7 +28,7 @@ export default class DynoList extends Component {
 
 	render() {
 		return (
-			<div className="dyno-list-container">
+			<div className="dyno-list-container" ref={this.list}>
 				{this.props.data.map((e, i) => {
 					return (
 						<DynoItem

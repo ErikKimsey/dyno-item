@@ -1,15 +1,14 @@
 
 
   .dyno-display-container {
-    position: static;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    width:1100px;
-    height:600px;
+    width: 1100px;
+    height: 600px;
     background-color: #000000;
-    // z-index: -1;
+    top: 100px;
     .exit {
       display: flex;
       justify-self: right;

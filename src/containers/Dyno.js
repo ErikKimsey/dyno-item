@@ -37,12 +37,12 @@ export default class Dyno extends Component {
 	render() {
 		return (
 			<div>
-				<DynoDisplay data={this.state.currentDyno} exit={this.handleExit} handleClick={this.handleClick} />
 				<DynoList
 					data={this.state.sumpin}
 					handleClick={this.handleClick}
 					isDisplaying={this.state.displayDyno}
 				/>
+				<DynoDisplay data={this.state.currentDyno} exit={this.handleExit} handleClick={this.handleClick} />
 			</div>
 		);
 	}
