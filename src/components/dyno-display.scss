@@ -7,13 +7,15 @@
     align-items: center;
     width: 1100px;
     height: 600px;
-    background-color: #000000;
+    background-color: #ffeff7;
     top: 100px;
+    color: #333333;
     a {
       text-decoration: none;
-      color:#d7ffb3;
+      color:#d7aff3;
       &:hover {
-        color:#f7bff1;
+        color:#f303ba;
+        background-color: #f7eff7;
       }
     }
     .exit {
@@ -24,6 +26,13 @@
       background-color: #333333;
       border: solid 0px;  
       border-radius: 3px;
+      color: #ffeff7;
+      transition:all 500ms;
+      &:hover {
+        padding:10px 20px; 
+        color:#ffffff;
+        background-color: darken(#333333, 20%);
+      }
     }
     .title{
       font-size: 1.3em;
