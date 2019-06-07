@@ -10,12 +10,17 @@
   }
 }
 @keyframes showFont {
-  from {
+  0% {
     font-size: 0em;
+    color:rgba(0,0,0,0);
   }
-  
-  to {
+  90% {
+    font-size: 0em;
+    color:rgba(0,0,0,0);
+  }
+  100% {
     font-size: 1em;
+    color:$purple;
   }
 }
 
@@ -29,24 +34,20 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  transition: width 1000ms ease-in-out;
-  font-size: 0em;
-  .item {
-    font-size: 1em;
-  }
+  font-size: 1em;
+  transition: all 1000ms ease-in-out;
+  // animation: showFont 1000ms;
+  // .item {
+  //   font-size: 0em;
+  // }
 }
 
 .left-disappeared {
-  width: 10px;
+  width: 0px;
   font-size: 0em;
   animation: hideFont 1000ms;
 }
 
-.item-disappeared {
-  display: none;
-  transition: width 1000ms ease-in-out;
-
-}
 .left-appeared {
   background-color: #ffffff;
   width: 100%;
@@ -57,13 +58,10 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
-  transition: width 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
   animation: showFont 1000ms;
-  // z-index: 3;
 }
 
-.item-appeared {
-  display: inline;
-  transition: width 1000ms ease-in-out;
+.toggle-font {
+  font-size: 1em;
 }

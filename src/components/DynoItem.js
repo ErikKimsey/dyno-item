@@ -14,6 +14,9 @@ export default class DynoItem extends Component {
 
 	componentDidMount() {
 		this.setIfOdd(this.props);
+		if (this.props.isDisplaying === true) {
+			this.item.current.classList.remove('left-appeared');
+		}
 	}
 
 	setIfOdd = (d) => {

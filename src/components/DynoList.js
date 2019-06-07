@@ -18,7 +18,9 @@ export default class DynoList extends Component {
 				this.list.current.classList.add('isDisplaying');
 			}, 2000);
 		} else {
-			this.list.current.classList.remove('isDisplaying');
+			setTimeout(() => {
+				this.list.current.classList.remove('isDisplaying');
+			}, 100);
 		}
 	}
 
