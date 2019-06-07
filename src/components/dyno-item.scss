@@ -34,12 +34,10 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
   transition: all 1000ms ease-in-out;
   // animation: showFont 1000ms;
-  // .item {
-  //   font-size: 0em;
-  // }
+  font-size: 0;
+  color:rgba(0,0,0,0);
 }
 
 .left-disappeared {
@@ -59,6 +57,8 @@
   justify-content: center;
   align-items: center;
   transition: all 1000ms ease-in-out;
+  font-size: 1em; 
+
   animation: showFont 1000ms;
 }
 
