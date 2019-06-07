@@ -35,7 +35,6 @@
   justify-content: center;
   align-items: center;
   transition: all 1000ms ease-in-out;
-  // animation: showFont 1000ms;
   font-size: 0;
   color:rgba(0,0,0,0);
 }
@@ -60,8 +59,4 @@
   font-size: 1em; 
 
   animation: showFont 1000ms;
-}
-
-.toggle-font {
-  font-size: 1em;
 }
