@@ -9,6 +9,13 @@
     height: 600px;
     background-color: #000000;
     top: 100px;
+    a {
+      text-decoration: none;
+      color:#d7ffb3;
+      &:hover {
+        color:#f7bff1;
+      }
+    }
     .exit {
       display: flex;
       justify-self: right;
@@ -18,7 +25,9 @@
       border: solid 0px;  
       border-radius: 3px;
     }
-    .title{}
+    .title{
+      font-size: 1.3em;
+    }
     .tech-stack {}
     .description{}
     a {

@@ -10,8 +10,10 @@ export default function DynoDisplay(props) {
 			<div className="title">{props.data.title}</div>
 			<div className="tech-stack" />
 			<div className="description" />
-			<a href={props.data.url}>{props.data.url}</a>
-			<div>{props.data.author}</div>
+			<a href={props.data.url} target="_blank">
+				{props.data.url}
+			</a>
+			<div>by: {props.data.author}</div>
 			<a href="" className="github-url" />
 			<a href="" className="deployed-url" />
 			<div className="exit" onClick={exit}>
