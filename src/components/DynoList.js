@@ -20,7 +20,7 @@ export default class DynoList extends Component {
 		} else {
 			setTimeout(() => {
 				this.list.current.classList.remove('isDisplaying');
-			}, 100);
+			}, 120);
 		}
 	}
 

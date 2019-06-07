@@ -5,9 +5,11 @@
   height: 600px;
   background-color: #000000;
   overflow-y: auto;
+  transition: all 1500ms ease-in-out;
 }
 
 .isDisplaying {
   display: none;
   font-size: 0em;
+  transition: all 1500ms ease-in-out;
 }
