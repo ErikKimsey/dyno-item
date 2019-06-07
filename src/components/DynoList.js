@@ -1,45 +1,34 @@
 import React, { Component } from 'react';
 import DynoItem from './DynoItem';
-import DynoDisplay from '../components/DynoDisplay';
 
 import './dyno-list.scss';
 
 export default class DynoList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			displayDyno: false,
-			currentDyno: {}
-		};
+		this.state = {};
 		this.list = React.createRef();
 	}
 
-	handleClick = (d) => {
-		this.setState({ displayDyno: true });
-		this.displayDyno(d);
-	};
+	componentDidMount() {
+		console.log('mounted list');
 
-	toggleList = () => {};
+		window.addEventListener('scroll', (e) => {
+			console.log(e.target);
+		});
+	}
 
-	displayDyno = (data) => {
-		console.log(data);
-		this.setState({ currentDyno: data });
-	};
-
-	handleExit = () => {
-		this.setState({ displayDyno: false });
+	handleClick = (e) => {
+		this.props.handleClick(e);
 	};
 
 	render() {
-		console.log(this.state.displayDyno);
-
 		return (
 			<div className="dyno-list-container">
-				<DynoDisplay data={this.state.currentDyno} exit={this.handleExit} />
 				{this.props.data.map((e, i) => {
 					return (
 						<DynoItem
-							isDisplaying={this.state.displayDyno}
+							isDisplaying={this.props.isDisplaying}
 							key={e.title}
 							data={e}
 							index={++i}

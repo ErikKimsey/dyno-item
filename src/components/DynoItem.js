@@ -22,6 +22,8 @@ export default class DynoItem extends Component {
 	};
 
 	componentDidUpdate() {
+		console.log('item update');
+
 		if (this.props.isDisplaying === true) {
 			setTimeout(() => {
 				this.item.current.classList.remove('left-appeared');

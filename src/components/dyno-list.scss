@@ -1,8 +1,8 @@
 
 .dyno-list-container {
-  width:1100px;
-  height:600px;
+  width: 1100px;
+  height: 600px;
   background-color: #000000;
-  overflow: scroll;
-  z-index: 1;
+  overflow-y: auto;
+  // z-index: 0;
 }

@@ -2,9 +2,17 @@
 
 
 .dyno-container {
-  // display: none;
+  display: none;
   width:1100px;
   height:600px;
   background-color: #000000;
-  overflow: scroll;
+  // overflow: scroll;
+  .dyno-list-container {
+  width: 1100px;
+  height: 600px;
+  background-color: #000000;
+  // overflow-y: auto;
+  // z-index: 1;
+  // -webkit-overflow-scrolling: touch;
+}
 }
