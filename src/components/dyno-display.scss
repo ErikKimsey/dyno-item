@@ -7,15 +7,17 @@
     align-items: center;
     width: 1100px;
     height: 600px;
-    background-color: #ffeff7;
+    // background-color: #ffeff7;
+    background-color: #afeff7;
     top: 100px;
     color: #333333;
+    color: #555555;
     a {
       text-decoration: none;
-      color:#d7aff3;
+      color:#f578ef;
       &:hover {
         color:#f303ba;
-        background-color: #f7eff7;
+        // background-color: #f7eff7;
       }
     }
     .exit {
