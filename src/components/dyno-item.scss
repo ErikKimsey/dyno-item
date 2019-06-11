@@ -1,5 +1,6 @@
 @import '../styles/globals.scss';
 @import '../styles/media-queries.scss';
+@import '../styles/globals.scss';
 
 // $phone-only: phone-only;
 // $tablet-portrait-up: tablet-portrait-up;
@@ -42,6 +43,7 @@
   transition: all 1000ms ease-in-out;
   font-size: 0;
   color:rgba(0,0,0,0);
+  color:$purple;
   &:hover {
     background-color: darken(#ffffff, 10%);
   }
@@ -78,5 +80,6 @@
   @include for-size(desktop-up){
     background-color: #222222;
     color:#a1a2a1;
+    color: $purple;
   }
 }
