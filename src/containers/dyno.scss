@@ -1,10 +1,26 @@
+@import '../styles/break-points.scss';
+@import '../styles/media-queries.scss';
 
+$xsDevice:300px;
+$smDevice:405px;
+$mdDevice:767px;
+$lgDevice:1024px;
+$xlDevice:1250px;
 
+$white: #ffffff;
 
 .dyno-container {
   display: none;
-  width:1100px;
-  height:600px;
+  width: 1100px;
+  height: 600px;
   background-color: #000000;
-  // overflow: scroll;
+  @include for-size(tablet-portrait-up){
+    
+  }
+  @include for-size(tablet-landscape-up){
+
+  }
+  @include for-size(desktop-up){
+
+  }
 }

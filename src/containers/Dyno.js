@@ -15,7 +15,7 @@ export default class Dyno extends Component {
 		window.addEventListener('scroll', (e) => {
 			console.log(e.target);
 		});
-		this.props.getStories('Yarn').then((data) => {
+		this.props.getStories('Vue').then((data) => {
 			this.setState({ sumpin: data });
 		});
 	}

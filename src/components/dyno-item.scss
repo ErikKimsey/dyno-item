@@ -1,33 +1,31 @@
 @import '../styles/globals.scss';
+@import '../styles/media-queries.scss';
+
+// $phone-only: phone-only;
+// $tablet-portrait-up: tablet-portrait-up;
+// $tablet-landscape-up: tablet-landscape-up;
+// $desktop-up: desktop-up;
+// $big-desktop-up: big-desktop-up;
 
 @keyframes hideFont {
   from {
-    // font-size: 1em;
-    // height:100px;
     opacity: 1;
   }
   
   to {
-    // font-size: 0em;
-    // height:0px;
     opacity: 0;
   }
 }
 @keyframes showFont {
   0% {
-    // height: 0;
     opacity: 0;
-    // font-size: 0em;
     color:rgba(0,0,0,0);
   }
   90% {
-    // font-size: 0em;
     color:rgba(0,0,0,0);
   }
   100% {
     opacity: 1;
-    // height:100px;
-    // font-size: 1em;
     color:$purple;
   }
 }
@@ -46,6 +44,15 @@
   color:rgba(0,0,0,0);
   &:hover {
     background-color: darken(#ffffff, 10%);
+  }
+  @include for-size($tablet-portrait-up){
+
+  }
+  @include for-size($tablet-landscape-up){
+
+  }
+  @include for-size($desktop-up){
+
   }
 }
 
@@ -68,4 +75,8 @@
   transition: all 1000ms ease-in-out;
   font-size: 1em; 
   animation: showFont 1000ms;
+  @include for-size(desktop-up){
+    background-color: #222222;
+    color:#a1a2a1;
+  }
 }
