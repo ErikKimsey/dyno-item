@@ -13,8 +13,6 @@ export default class DynoItem extends Component {
 	}
 
 	componentDidMount() {
-		console.log(this.props);
-
 		this.setIfOdd(this.props);
 		if (this.props.isDisplaying === true) {
 			this.item.current.classList.add('left-appeared');

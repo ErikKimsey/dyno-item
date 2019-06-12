@@ -10,12 +10,21 @@
     background-color: #afeff7;
     top: 100px;
     color: #555555;
+    .display-item {
+      max-width: 90%;
+      padding: 10px;
+      &.title{
+        font-size: 1.3em;
+      }
+      .tech-stack {}
+      .description{}
+    }
     a {
+      max-width: 90%;
       text-decoration: none;
       color:#f578ef;
       &:hover {
         color:#f303ba;
-        // background-color: #f7eff7;
       }
     }
     .exit {
@@ -34,11 +43,6 @@
         background-color: darken(#333333, 20%);
       }
     }
-    .title{
-      font-size: 1.3em;
-    }
-    .tech-stack {}
-    .description{}
     a {
       .github-url{}
       .deployed-url {}

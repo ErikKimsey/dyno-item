@@ -7,7 +7,9 @@ import './dyno-list.scss';
 export default class DynoList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			hasArrowed: false
+		};
 		this.list = React.createRef();
 	}
 
@@ -29,10 +31,22 @@ export default class DynoList extends Component {
 		this.props.handleClick(e);
 	};
 
+	componentWillUnmount() {
+		// this.setState({ hasArrowed: false });
+	}
+
 	render() {
+		// let arrow;
+		// if (this.state.hasArrowed === false) {
+		// 	arrow = <ScrollArrow data={this.state.hasArrowed} />;
+		// 	this.setState({ hasArrowed: true });
+		// } else {
+		// 	this.setState({ hasArrowed: false });
+		// }
 		return (
 			<div className="dyno-list-container" ref={this.list}>
-				<ScrollArrow />
+				<ScrollArrow data={this.state.hasArrowed} />
+				{/* {arrow} */}
 				{this.props.data.map((e, i) => {
 					return (
 						<DynoItem

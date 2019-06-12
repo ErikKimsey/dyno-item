@@ -6,22 +6,31 @@
   position: absolute;
   width: 87px;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   z-index: 10;
   left: calc(50% - 43px);
   bottom: calc(5vh);
-  opacity: 0;
-  animation: bounce 800ms 2800ms 4 ease-in-out;
+  opacity: 1;
   i {
     width: 10px;
     border: solid $pink;
     border-width: 0 25px 25px 0;
     padding: 33px 33px;
+    opacity: 0;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    animation: bounce 800ms 2800ms 4 ease-in-out;
   }
+}
+
+.animate-bounce {
+  animation: bounce 800ms 2800ms 4 ease-in-out;
+}
+
+.animate-opacity {
+  animation: opacityBump 800ms 2800ms 4 ease-in-out;
 }
 
 @keyframes bounce {
@@ -34,5 +43,17 @@
   }
   100% {
     bottom: calc(10vh);
+  }
+}
+
+@keyframes opacityBump {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    bottom: calc(5vh);
+  }
+  100% {
+    opacity: 0;
   }
 }
