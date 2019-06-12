@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DynoDisplay from '../components/DynoDisplay';
 import DynoList from '../components/DynoList';
+import ScrollArrow from '../components/scrollArrow';
 
 import './dyno.scss';
 
@@ -37,6 +38,7 @@ export default class Dyno extends Component {
 	render() {
 		return (
 			<div>
+				<ScrollArrow />
 				<DynoList
 					data={this.state.sumpin}
 					handleClick={this.handleClick}

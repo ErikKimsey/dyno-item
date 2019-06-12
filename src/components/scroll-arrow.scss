@@ -1,0 +1,21 @@
+@import '../styles/globals.scss';
+
+
+.scroll-arrow-container {
+  position: absolute;
+  width: 87px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  left: calc(50% - 43px);
+  bottom: calc(15vh);
+  i {
+    border: solid black;
+    border-width: 0 15px 15px 0;
+    padding: 23px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}

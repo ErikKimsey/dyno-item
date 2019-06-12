@@ -78,7 +78,6 @@
   font-size: 1em; 
   animation: showFont 1000ms;
   @include for-size($phone-only){
-    // max-width: 599px;
     background-color: #222222;
     color:#a1a2a1;
     color: $purple;
