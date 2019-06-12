@@ -13,7 +13,7 @@
   left: calc(50% - 43px);
   bottom: calc(5vh);
   opacity: 0;
-  animation: bounce 800ms 3s 4 ease-in-out;
+  animation: bounce 800ms 2800ms 4 ease-in-out;
   i {
     width: 10px;
     border: solid $pink;
@@ -23,11 +23,6 @@
     -webkit-transform: rotate(45deg);
   }
 }
-
-.bouncing {
-  
-}
-
 
 @keyframes bounce {
   0% {
@@ -39,6 +34,5 @@
   }
   100% {
     bottom: calc(15vh);
-    opacity: 1;
   }
 }
