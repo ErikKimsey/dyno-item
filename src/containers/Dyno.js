@@ -38,7 +38,7 @@ export default class Dyno extends Component {
 	render() {
 		return (
 			<div>
-				{/* <ScrollArrow /> */}
+				<ScrollArrow />
 				<DynoList
 					data={this.state.sumpin}
 					handleClick={this.handleClick}
