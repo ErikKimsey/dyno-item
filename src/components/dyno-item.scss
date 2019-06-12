@@ -77,6 +77,17 @@
   transition: all 1000ms ease-in-out;
   font-size: 1em; 
   animation: showFont 1000ms;
+  @include for-size($phone-only){
+    // max-width: 599px;
+    background-color: #222222;
+    color:#a1a2a1;
+    color: $purple;
+    font-size: 0.8em;
+    .item {
+      text-overflow: ellipsis;
+    }
+    text-overflow: ellipsis;
+  }
   @include for-size(desktop-up){
     background-color: #222222;
     color:#a1a2a1;
