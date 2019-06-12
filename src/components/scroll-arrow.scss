@@ -16,8 +16,8 @@
   animation: bounce 800ms 3s 4 ease-in-out;
   i {
     width: 10px;
-    border: solid $teal;
-    border-width: 0 15px 15px 0;
+    border: solid $pink;
+    border-width: 0 25px 25px 0;
     padding: 33px 33px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -36,7 +36,6 @@
   }
   50% {
     bottom: calc(10vh);
-    opacity: 1;
   }
   100% {
     bottom: calc(15vh);
