@@ -1,4 +1,5 @@
 @import '../styles/globals.scss';
+@import '../styles/animations.scss';
 
 
 .scroll-arrow-container {
@@ -11,11 +12,25 @@
   z-index: 10;
   left: calc(50% - 43px);
   bottom: calc(15vh);
+  animation: bounce 800ms 3s 4 ease-in-out;
   i {
     border: solid black;
     border-width: 0 15px 15px 0;
     padding: 23px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+  }
+}
+
+
+@keyframes bounce {
+  0% {
+    bottom: calc(15vh);
+  }
+  50% {
+    bottom: calc(10vh);
+  }
+  100% {
+    bottom: calc(15vh);
   }
 }
