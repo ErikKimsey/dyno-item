@@ -32,6 +32,7 @@ export default class DynoList extends Component {
 	render() {
 		return (
 			<div className="dyno-list-container" ref={this.list}>
+				<ScrollArrow />
 				{this.props.data.map((e, i) => {
 					return (
 						<DynoItem

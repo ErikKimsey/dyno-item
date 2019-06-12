@@ -7,9 +7,11 @@ $xlDevice:1250px;
 
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
 .App-header {
+  box-sizing: border-box;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;

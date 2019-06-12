@@ -11,7 +11,7 @@
   align-items: center;
   z-index: 10;
   left: calc(50% - 43px);
-  bottom: calc(15vh);
+  bottom: calc(5vh);
   opacity: 0;
   animation: bounce 800ms 2800ms 4 ease-in-out;
   i {
@@ -26,13 +26,13 @@
 
 @keyframes bounce {
   0% {
-    bottom: calc(20vh);
+    bottom: calc(10vh);
     opacity: 1;
   }
   50% {
-    bottom: calc(15vh);
+    bottom: calc(5vh);
   }
   100% {
-    bottom: calc(20vh);
+    bottom: calc(10vh);
   }
 }
