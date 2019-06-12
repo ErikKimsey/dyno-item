@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DynoItem from './DynoItem';
+import ScrollArrow from './scrollArrow';
 
 import './dyno-list.scss';
 
@@ -7,7 +8,7 @@ export default class DynoList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
-		this.list = React.createRef();
+    this.list = React.createRef();
 	}
 
 	componentDidMount() {}
@@ -31,6 +32,7 @@ export default class DynoList extends Component {
 	render() {
 		return (
 			<div className="dyno-list-container" ref={this.list}>
+				<ScrollArrow />
 				{this.props.data.map((e, i) => {
 					return (
 						<DynoItem
