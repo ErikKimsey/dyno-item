@@ -34,8 +34,8 @@
 }
 
 .hide {
-  // display: none;
-  background-color: aquamarine;
+  display: none;
+  // background-color: aquamarine;
 }
 
 @keyframes bounce {
@@ -51,7 +51,7 @@
   }
   100% {
     bottom: calc(10vh);
-    transform: scale(0.5) rotate(45deg);
+    transform: scale(0.8) rotate(45deg);
   }
 }
 
