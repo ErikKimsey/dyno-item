@@ -1,36 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './scroll-arrow.scss';
 
-function animateItems(e, d){
-  
-}
-
 export default function ScrollArrow() {
-	let cont = document.querySelectorAll('i');
-	if (cont.length) {
-		let i = 0,
-			delay = 500;
-		// document.querySelector('.scroll-arrow-container').classList.add('animate-bounce');
-		while (i < cont.length - 1) {
-			console.log(cont[i]);
-			setTimeout(() => {
-				cont[i].classList.add('animate-bounce');
-				console.log(Date.now());
-			}, delay);
-			i++;
-			delay += 500;
-		}
-	} else {
-		console.log('nope');
-  }
-  
-  
+	let contI = document.querySelectorAll('i');
+	let cont = document.querySelector('.scroll-arrow-container');
+	console.log(cont);
+	// cont.style.display = 'none';
+
+	contI.forEach((e, i) => {
+		i += 1;
+		setTimeout(() => {
+			stagger(e);
+		}, 250 * i);
+		console.log('yo');
+	});
+
+	if (cont !== null) cont.classList.add('hide');
+
+	const stagger = (e) => {
+		e.classList.add('animate-bounce');
+	};
 
 	return (
 		<div className="scroll-arrow-container">
 			<i className="arrow-1" />
 			<i className="arrow-2" />
 			<i className="arrow-3" />
+			{/* <i className="arrow-2" />
+			<i className="arrow-3" /> */}
 		</div>
 	);
 }

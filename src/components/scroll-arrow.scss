@@ -21,16 +21,21 @@
     opacity: 0;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    animation: bounce 800ms 2800ms 4 ease-in-out;
   }
 }
 
 .animate-bounce {
-  animation: bounce 800ms 2800ms 4 ease-in-out;
+  opacity: 1;
+  animation: bounce 300ms 2800ms 2 ease-in-out;
 }
 
 .animate-opacity {
   animation: opacityBump 800ms 2800ms 4 ease-in-out;
+}
+
+.hide {
+  // display: none;
+  // background-color: aquamarine;
 }
 
 @keyframes bounce {
@@ -40,6 +45,7 @@
   }
   50% {
     bottom: calc(5vh);
+    opacity: 1;
   }
   100% {
     bottom: calc(10vh);
