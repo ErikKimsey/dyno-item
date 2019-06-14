@@ -14,10 +14,10 @@
   bottom: calc(5vh);
   opacity: 1;
   i {
-    width: 10px;
+    width: 4px;
     border: solid $pink;
     border-width: 0 25px 25px 0;
-    padding: 33px 33px;
+    padding: 24px;
     opacity: 0;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -26,7 +26,7 @@
 
 .animate-bounce {
   opacity: 1;
-  animation: bounce 300ms 2800ms 2 ease-in-out;
+  animation: bounce 750ms 2500ms 3 ease-in-out;
 }
 
 .animate-opacity {
@@ -35,20 +35,23 @@
 
 .hide {
   // display: none;
-  // background-color: aquamarine;
+  background-color: aquamarine;
 }
 
 @keyframes bounce {
   0% {
     bottom: calc(10vh);
     opacity: 1;
+    transform: scale(0.5) rotate(45deg);
   }
   50% {
     bottom: calc(5vh);
     opacity: 1;
+    transform: scale(1.1) rotate(45deg);
   }
   100% {
     bottom: calc(10vh);
+    transform: scale(0.5) rotate(45deg);
   }
 }
 
