@@ -3,7 +3,7 @@
 
 
 .scroll-arrow-container {
-  position: absolute;
+  position: fixed;
   width: 87px;
   display: flex;
   flex-flow: column;
@@ -11,7 +11,7 @@
   align-items: center;
   z-index: 10;
   left: calc(50% - 43px);
-  bottom: calc(5vh);
+  bottom: calc(15vh);
   opacity: 1;
   i {
     width: 4px;
@@ -35,6 +35,7 @@
 
 .hide {
   display: none;
+  // background-color: black;
 }
 
 @keyframes bounce {
